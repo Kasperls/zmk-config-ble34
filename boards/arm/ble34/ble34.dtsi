@@ -16,7 +16,7 @@
 
 / {
     model = "ble34";
-    compatible = "SlightlyHotEgg,ble34";
+    compatible = "Egg,ble34";
 
     chosen {
         zephyr,code-partition = &code_partition;
