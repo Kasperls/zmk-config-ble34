@@ -13,12 +13,12 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif # B_BLE34_LEFT
 
-#if B_BLE34_RIGHT
+if B_BLE34_RIGHT
 
-#config ZMK_KEYBOARD_NAME
-#    default "ble34 right"
+config ZMK_KEYBOARD_NAME
+    default "ble34 right"
 
-#endif # B_BLE34_RIGHT
+endif # B_BLE34_RIGHT
 
 
 if B_BLE34_LEFT || B_BLE34_RIGHT
@@ -29,17 +29,17 @@ config BOARD
 config ZMK_SPLIT
     default y
 
-#config BT_CTLR
-#    default BT
+config BT_CTLR
+    default BT
 
-#if USB
+if USB
 
-#config USB_NRFX
-#    default y
+config USB_NRFX
+    default y
 
-#config USB_DEVICE_STACK
-#    default y
+config USB_DEVICE_STACK
+    default y
 
-#endif # USB
+endif # USB
 
 endif # B_BLE34_LEFT || B_BLE34_RIGHT
