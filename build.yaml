@@ -19,5 +19,5 @@
 #
 ---
 include:
-  - board: corneish_zen_v1_left
-  - board: corneish_zen_v1_right
+  - board: ble34_left
+  - board: ble34_right

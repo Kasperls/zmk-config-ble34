@@ -1,0 +1,14 @@
+file_format: '1'
+id: ble34
+name: ble34
+type: board
+url: 
+arch: arm
+features:
+  - keys
+outputs:
+  - usb
+  - ble
+siblings:
+  - ble34_left
+  - ble34_right
