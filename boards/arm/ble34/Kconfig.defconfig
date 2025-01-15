@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 #
 
-if BOARD_BLE34_LEFT
+if B_BLE34_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "ble34"
@@ -11,17 +11,17 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-endif # BOARD_BLE34_LEFT
+endif # B_BLE34_LEFT
 
-if BOARD_BLE34_RIGHT
+if B_BLE34_RIGHT
 
 config ZMK_KEYBOARD_NAME
     default "ble34 right"
 
-endif # BOARD_BLE34_RIGHT
+endif # B_BLE34_RIGHT
 
 
-if BOARD_BLE34_LEFT || BOARD_BLE34_RIGHT
+if B_BLE34_LEFT || B_BLE34_RIGHT
 
 config BOARD
     default "ble34"
@@ -42,4 +42,4 @@ config USB_DEVICE_STACK
 
 endif # USB
 
-endif # BOARD_BLE34_LEFT || BOARD_BLE34_RIGHT
+endif # B_BLE34_LEFT || B_BLE34_RIGHT
