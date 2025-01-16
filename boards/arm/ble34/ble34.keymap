@@ -2,10 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#include <zephyr/device.h>
-#include <zephyr/drivers/gpio.h>
-#include <zephyr/kernel.h>
-
 /* Define the GPIO port and pin number */
 #define LED_PORT  "GPIO_0"   /* Replace with "GPIO_1" if your pin is on GPIO1 */
 #define LED_PIN   2          /* Replace with the actual pin number */
