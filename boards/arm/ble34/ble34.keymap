@@ -6,7 +6,7 @@
 #define LED_PORT  "GPIO_0"   /* Replace with "GPIO_1" if your pin is on GPIO1 */
 #define LED_PIN   2          /* Replace with the actual pin number */
 
-{
+/ {
     const struct device *gpio_dev;
     int ret;
 
