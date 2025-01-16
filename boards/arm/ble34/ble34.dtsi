@@ -48,9 +48,6 @@
         full-ohms = <(806000 + 2000000)>;
     };
 
-};
-
-{
     leds {
         compatible = "gpio-leds";
         status_led: status_led {
@@ -58,7 +55,9 @@
             label = "Status LED";
         };
     };
+
 };
+
 
 
 &adc {
