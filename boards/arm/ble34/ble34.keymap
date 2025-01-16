@@ -2,35 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-/* Define the GPIO port and pin number */
-#define LED_PORT  "GPIO_0"   /* Replace with "GPIO_1" if your pin is on GPIO1 */
-#define LED_PIN   2          /* Replace with the actual pin number */
-
-/ {
-    const struct device *gpio_dev;
-    int ret;
-
-    /* Get the GPIO device */
-    gpio_dev = device_get_binding(LED_PORT);
-    if (!gpio_dev) {
-        printk("Error: Failed to bind to GPIO device %s\n", LED_PORT);
-        return;
-    }
-
-    /* Configure the pin as an output and set it HIGH */
-    ret = gpio_pin_configure(gpio_dev, LED_PIN, GPIO_OUTPUT_HIGH);
-    if (ret < 0) {
-        printk("Error: Failed to configure GPIO pin %d\n", LED_PIN);
-        return;
-    }
-
-    /* Keep the LED on indefinitely */
-    while (1) {
-        k_sleep(K_FOREVER);
-    }
-}
-
-
 
 
 
