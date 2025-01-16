@@ -50,6 +50,17 @@
 
 };
 
+{
+    leds {
+        compatible = "gpio-leds";
+        status_led: status_led {
+            gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+            label = "Status LED";
+        };
+    };
+};
+
+
 &adc {
     status = "okay";
 };
