@@ -2,33 +2,29 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-
 #include <zephyr/device.h>
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/kernel.h>
 
-/* Define the LED node */
-#define LED_NODE DT_ALIAS(led_0)
+/* Define the GPIO port and pin number */
+#define LED_PORT  "GPIO_0"   /* Replace with "GPIO_1" if your pin is on GPIO1 */
+#define LED_PIN   2          /* Replace with the actual pin number */
 
-#if DT_NODE_HAS_STATUS(LED_NODE, okay)
-static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED_NODE, gpios);
-#else
-#error "LED device is not defined in the device tree"
-#endif
-
-void main(void) {
+{
+    const struct device *gpio_dev;
     int ret;
 
-    /* Ensure the GPIO device is ready */
-    if (!device_is_ready(led.port)) {
-        printk("Error: LED GPIO device is not ready\n");
+    /* Get the GPIO device */
+    gpio_dev = device_get_binding(LED_PORT);
+    if (!gpio_dev) {
+        printk("Error: Failed to bind to GPIO device %s\n", LED_PORT);
         return;
     }
 
-    /* Configure the LED GPIO as an output */
-    ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE);
+    /* Configure the pin as an output and set it HIGH */
+    ret = gpio_pin_configure(gpio_dev, LED_PIN, GPIO_OUTPUT_HIGH);
     if (ret < 0) {
-        printk("Error: Failed to configure LED GPIO\n");
+        printk("Error: Failed to configure GPIO pin %d\n", LED_PIN);
         return;
     }
 
@@ -37,6 +33,7 @@ void main(void) {
         k_sleep(K_FOREVER);
     }
 }
+
 
 
 
