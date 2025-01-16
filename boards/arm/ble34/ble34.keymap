@@ -2,6 +2,45 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+
+#include <zephyr/device.h>
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/kernel.h>
+
+/* Define the LED node */
+#define LED_NODE DT_ALIAS(led_0)
+
+#if DT_NODE_HAS_STATUS(LED_NODE, okay)
+static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED_NODE, gpios);
+#else
+#error "LED device is not defined in the device tree"
+#endif
+
+void main(void) {
+    int ret;
+
+    /* Ensure the GPIO device is ready */
+    if (!device_is_ready(led.port)) {
+        printk("Error: LED GPIO device is not ready\n");
+        return;
+    }
+
+    /* Configure the LED GPIO as an output */
+    ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE);
+    if (ret < 0) {
+        printk("Error: Failed to configure LED GPIO\n");
+        return;
+    }
+
+    /* Keep the LED on indefinitely */
+    while (1) {
+        k_sleep(K_FOREVER);
+    }
+}
+
+
+
+
 #define DEFAULT 0
 #define CODE    1
 #define MISC    2
