@@ -64,11 +64,6 @@ zephyr_udc0: usbd@deadbeef {
 
 };
 
-/ {
-     
-};
-
-
 
 &adc {
     status = "okay";
@@ -84,13 +79,6 @@ zephyr_udc0: usbd@deadbeef {
 
 &gpio1 {
     status = "okay";
-};
-
-&usbd {
-    status = "okay";
-    cdc_acm_uart: cdc_acm_uart {
-        compatible = "zephyr,cdc-acm-uart";
-    };
 };
 
 &flash0 {
