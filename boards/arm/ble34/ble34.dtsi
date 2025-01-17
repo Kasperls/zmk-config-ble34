@@ -5,6 +5,11 @@
 *
 */
 
+zephyr_udc0: usbd@deadbeef {
+     compatible = "vnd,usb-device";
+     /* ... */
+};
+
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 
