@@ -5,11 +5,6 @@
 *
 */
 
-zephyr_udc0: usbd@deadbeef {
-     compatible = "vnd,usb-device";
-     /* ... */
-};
-
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 
@@ -80,6 +75,7 @@ zephyr_udc0: usbd@deadbeef {
 &gpio1 {
     status = "okay";
 };
+
 
 &flash0 {
         partitions {
