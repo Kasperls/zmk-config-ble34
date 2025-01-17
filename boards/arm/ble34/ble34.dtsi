@@ -23,6 +23,7 @@
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         zephyr,console = &cdc_acm_uart;
+        zephyr,console = &zephyr_udc0;
         zmk,kscan = &kscan0;
         zmk,battery = &vbatt;
         zmk,matrix-transform = &default_transform;
@@ -56,7 +57,12 @@
              led_0: led_0 {
                      gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
              };
-     };
+    };
+
+    zephyr_udc0: usbd@deadbeef {
+     compatible = "vnd,usb-device";
+     /* ... */
+    };
 
 };
 
