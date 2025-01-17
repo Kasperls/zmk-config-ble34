@@ -5,6 +5,7 @@
 *
 */
 
+
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 
@@ -76,6 +77,12 @@
     status = "okay";
 };
 
+&usbd {
+    status = "okay";
+    cdc_acm_uart: cdc_acm_uart {
+        compatible = "zephyr,cdc-acm-uart";
+    };
+};
 
 &flash0 {
         partitions {
