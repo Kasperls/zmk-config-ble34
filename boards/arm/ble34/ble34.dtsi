@@ -59,7 +59,7 @@
              };
     };
 
-    zephyr_udc0: usbd@40027000 {
+    zephyr_udc0: usbd@deadbeef {
         compatible = "nordic,nrf-usbd";
         reg = <0x40027000 0x1000>;
         interrupts = <24>; /* USB IRQ line */
