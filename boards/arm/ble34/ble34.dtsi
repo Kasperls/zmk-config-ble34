@@ -60,10 +60,8 @@
     };
 
     zephyr_udc0: usbd@deadbeef {
-        compatible = "nordic,nrf-usbd";
         reg = <0x40027000 0x1000>;
         num-isoin-endpoints = <1>;
-        interrupts = <24>; /* USB IRQ line */
         status = "okay";
     };
 
