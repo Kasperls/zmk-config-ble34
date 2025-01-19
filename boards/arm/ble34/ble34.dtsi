@@ -20,6 +20,7 @@
 
     chosen {
         zephyr,code-partition = &code_partition;
+        zephyr,supply = <&regout0>;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         zephyr,console = &cdc_acm_uart;
@@ -59,11 +60,11 @@
              };
     };
 
-    zephyr_udc0: usbd@deadbeef {
-        reg = <0x40027000 0x1000>;
-        num-isoin-endpoints = <1>;
-        status = "okay";
-    };
+    // zephyr_udc0: usbd@deadbeef {
+    //     reg = <0x40027000 0x1000>;
+    //     num-isoin-endpoints = <1>;
+    //     status = "okay";
+    // };
 
     &regulators {
     regout0: regout0 {
