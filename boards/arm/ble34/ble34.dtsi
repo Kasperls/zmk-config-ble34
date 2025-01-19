@@ -68,7 +68,7 @@
 
     regout0: regout0 {
         compatible = "nordic,nrf-regulators";
-        reg = <0x10001304 0x4>;
+        reg = <0x304 0xFFFFFFFF>; 
         status = "okay";
     };
 
