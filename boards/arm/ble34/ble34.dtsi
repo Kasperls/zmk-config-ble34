@@ -66,10 +66,6 @@
     //     status = "okay";
     // };
 
-};
-
-
-&regulators {
     regout0: regout0 {
         compatible = "nordic,nrf-regulators";
         regulator-always-on;
@@ -77,7 +73,13 @@
         regout0-value = <3>;      /* Set output voltage to 3.3V */
         status = "okay";
     };
+
 };
+
+
+// &regulators {
+    
+// };
 
 
 &adc {
