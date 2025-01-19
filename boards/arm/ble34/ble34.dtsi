@@ -20,7 +20,7 @@
 
     chosen {
         zephyr,code-partition = &code_partition;
-        zephyr,supply = <&regout0>;
+        // zephyr,supply = <&regout0>;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         zephyr,console = &cdc_acm_uart;
@@ -66,11 +66,11 @@
     //     status = "okay";
     // };
 
-    regout0: regout0 {
-        compatible = "nordic,nrf-regulators";
-        reg = <0xFFFFFFFF 0x304>; 
-        status = "okay";
-    };
+    // regout0: regout0 {
+    //     compatible = "nordic,nrf-regulators";
+    //     reg = <0xFFFFFFFF 0x304>; 
+    //     status = "okay";
+    // };
 
 };
 
