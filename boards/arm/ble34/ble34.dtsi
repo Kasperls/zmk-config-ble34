@@ -68,7 +68,6 @@
 
     regout0: regout0 {
         compatible = "nordic,nrf-regulators";
-        regulator-always-on;
         reg = <0x10001304 0x4>;
         regout0-gpio-supply = <0>; /* Enable default supply voltage */
         regout0-value = <3>;      /* Set output voltage to 3.3V */
