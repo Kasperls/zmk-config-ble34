@@ -12,9 +12,3 @@ outputs:
 siblings:
   - ble34_left
   - ble34_right
-
-properties:
-  port:
-    type: int
-    required: true
-    description: Port number for the GPIO
