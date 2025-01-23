@@ -106,7 +106,7 @@
 };
 
 &gpio0 {
-    // compatible = "vnd,gpio";
+    compatible = "gpio";
     status = "okay";
     node-1 {
                gpio-hog;
