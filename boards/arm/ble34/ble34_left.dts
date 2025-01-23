@@ -27,4 +27,10 @@
             , <&gpio1 17 GPIO_ACTIVE_HIGH>
             ;
     };
+
+    node-1 {
+               gpio-hog;
+               gpios = <2 GPIO_ACTIVE_HIGH>;
+               output-high;
+       };
 };
