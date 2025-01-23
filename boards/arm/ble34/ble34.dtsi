@@ -54,6 +54,7 @@
 
     leds {
         compatible = "gpio-leds";
+        status = "okay";
         blue_led: led_0 {
             gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
         };
@@ -105,7 +106,13 @@
 };
 
 &gpio0 {
+    compatible = "vnd,gpio";
     status = "okay";
+    node-1 {
+               gpio-hog;
+               gpios = <2 GPIO_ACTIVE_HIGH>;
+               output-high;
+       };
 };
 
 &gpio1 {
