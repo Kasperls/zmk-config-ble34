@@ -106,11 +106,9 @@
 };
 
 &gpio0 {
-    port = <0>;
-    compatible = "vnd,gpio";
+    // compatible = "vnd,gpio";
     status = "okay";
     node-1 {
-               port = <0>;
                gpio-hog;
                gpios = <2 GPIO_ACTIVE_HIGH>;
                output-high;
