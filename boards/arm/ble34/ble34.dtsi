@@ -106,6 +106,7 @@
 };
 
 &gpio0 {
+    port = <0>;
     compatible = "vnd,gpio";
     status = "okay";
     node-1 {
