@@ -95,7 +95,7 @@
 
             regout0: uicr@10001304 {
                 compatible = "nordic,nrf-regulators";
-                reg = <0x10001304>;
+                reg = <0x10001304 5>;
                 status = "okay";
             };
         };
