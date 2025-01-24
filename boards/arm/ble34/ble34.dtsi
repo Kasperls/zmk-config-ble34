@@ -80,7 +80,6 @@
     regout0: regout0 {
         compatible = "nordic,nrf-regulators";     // Indicates a UICR-controlled regulator
         reg = <0x10001304 0x4>;                   // Address of REGOUT0 in UICR
-        regulator-name = "UICR REGOUT0";          // Optional, but useful for debugging
         status = "okay";                          // Enables the node
     };
 
