@@ -54,9 +54,9 @@
 
     leds {
         compatible = "gpio-leds";
-        status = "okay";
         blue_led: led_0 {
             gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+            label = "Blue LED 0";
         };
     };
 
@@ -76,7 +76,7 @@
 
     regout0: regout0 {
         compatible = "nordic,nrf-regulators";
-        reg = <0xFFFFFFFF 0x304>; 
+        reg = <0x10001304>;
         status = "okay";
     };
 
