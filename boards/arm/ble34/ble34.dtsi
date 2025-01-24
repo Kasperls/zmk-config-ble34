@@ -74,11 +74,11 @@
     //     status = "okay";
     // };
 
-    regout0: regout0 {
-        compatible = "nordic,nrf-regulators";
-        reg = <0x10001304 0>;
-        status = "okay";
-    };
+    // regout0: regout0 {
+    //     compatible = "nordic,nrf-regulators";
+    //     reg = <0x10001304 0>;
+    //     status = "okay";
+    // };
 
 };
 
@@ -88,12 +88,19 @@
 // };
 
 &power {
-	reg0: regulator@40000580 {
+	// reg0: regulator@40000580 {
+	// 	compatible = "nordic,nrf52x-regulator-hv";
+	// 	reg = <0x40000580 0x580>;
+	// 	regulator-name = "REG0";
+	// 	status = "okay";
+	// };
+
+    reg0: regulator@40000580 {
 		compatible = "nordic,nrf52x-regulator-hv";
-		reg = <0x40000580 0x580>;
+		reg = <0x40000580 0x1>;
 		regulator-name = "REG0";
 		status = "okay";
-	};
+    };
 };
 
 
