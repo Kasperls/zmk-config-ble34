@@ -1,9 +1,24 @@
 name: Build ZMK firmware
 on: [push, pull_request, workflow_dispatch]
 
+    
+
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    run: |
-      cmake -Bbuild -GNinja -DBOARD=ble34 -DZMK_CONFIG=config -DZMK_EXTRA_MODULES=modules
-      ninja -Cbuild
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Zephyr environment
+        run: |
+          west init -l zmk/app
+          west update
+          west zephyr-export
+          pip3 install -r zmk/app/zephyr/scripts/requirements.txt
+          
+      - name: Build firmware
+        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+        run: |
+          cmake -Bbuild -GNinja -DBOARD=ble34 -DZMK_CONFIG=./config -DZMK_EXTRA_MODULES=./modules -DSNIPPET=zmk-usb-logging -S./zmk/app
+          ninja -Cbuild
