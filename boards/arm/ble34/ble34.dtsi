@@ -57,13 +57,11 @@
         // full-ohms = <(806000 + 2000000)>;
     };
 
-    zephyr_udc0: &usbd {
-        status = "okay";
-    };
-
-
 };
 
+zephyr_udc0: &usbd {
+    status = "okay";
+};
 
 &adc {
     status = "okay";
