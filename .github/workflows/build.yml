@@ -4,3 +4,6 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    run: |
+      cmake -Bbuild -GNinja -DBOARD=ble34 -DZMK_CONFIG=config -DZMK_EXTRA_MODULES=modules
+      ninja -Cbuild
