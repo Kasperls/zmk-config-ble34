@@ -21,3 +21,4 @@
 include:
   - board: ble34_left
   - board: ble34_right
+  - snippet: zmk-usb-logging

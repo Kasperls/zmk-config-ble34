@@ -24,7 +24,7 @@
         zephyr,flash = &flash0;
 
         zephyr,console = &cdc_acm_uart;
-        // zephyr,console = &zephyr_udc0;
+        zephyr,console = &zephyr_udc0;
         zmk,kscan = &kscan0;
         zmk,battery = &vbatt;
         zmk,matrix-transform = &default_transform;
@@ -57,14 +57,13 @@
         // full-ohms = <(806000 + 2000000)>;
     };
 
+    zephyr_udc0: &usbd {
+        status = "okay";
+    };
 
-    // zephyr_udc0: usbd@deadbeef {
-    //     reg = <0x40027000 0x1000>;
-    //     num-isoin-endpoints = <1>;
-    //     status = "okay";
-    // };
 
 };
+
 
 &adc {
     status = "okay";
