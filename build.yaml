@@ -19,6 +19,6 @@
 #
 ---
 include:
-  - board: ble34_left
   - board: ble34_right
-  - snippet: zmk-usb-logging
+  - board: ble34_left
+    snippet: zmk-usb-logging
