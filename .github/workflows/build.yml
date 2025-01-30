@@ -5,4 +5,6 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    run: |
+      west build -s zmk/app -d "/tmp/tmp.RifTmeF5X7" -b "" -S "zmk-usb-logging" -- -DZMK_CONFIG=/tmp/zmk-config/config  -DZMK_EXTRA_MODULES='/__w/zmk-config-ble34/zmk-config-ble34' --Board=ble34   
+#uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
