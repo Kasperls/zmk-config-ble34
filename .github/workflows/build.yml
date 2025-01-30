@@ -6,7 +6,3 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    secrets: inherit
-    with: {}  # Empty 'with' to avoid syntax issues
-    env:
-      BOARD: ble34_left  # Replace with your actual board
