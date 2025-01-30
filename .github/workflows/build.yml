@@ -18,7 +18,6 @@ jobs:
           pip3 install -r zmk/app/zephyr/scripts/requirements.txt
           
       - name: Build firmware
-        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
         run: |
           cmake -Bbuild -GNinja -DBOARD=ble34 -DZMK_CONFIG=./config -DZMK_EXTRA_MODULES=./modules -DSNIPPET=zmk-usb-logging -S./zmk/app
           ninja -Cbuild
