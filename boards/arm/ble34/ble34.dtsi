@@ -23,7 +23,7 @@
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
 
-        zephyr,console = &zephyr_udc0;
+        // zephyr,console = &zephyr_udc0;
 
 
         zmk,kscan = &kscan0;
@@ -60,6 +60,10 @@
 
 };
 
+zephyr_udc0: &usbd {
+    status = "okay";
+};
+
 &adc {
     status = "okay";
 };
@@ -76,9 +80,6 @@
     status = "okay";
 };
 
-// zephyr_udc0: &usbd {
-//     status = "okay";
-// };
 
 &flash0 {
 	partitions {
