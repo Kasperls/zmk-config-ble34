@@ -8,7 +8,6 @@
 #include "ble34.dtsi"
 
 /{
-    // I have tried with and without these lines enabled
 
     chosen {
         zephyr,console = &cdc_acm_uart;
@@ -39,11 +38,10 @@
 };
 
 zephyr_udc0: &usbd {
-    // I have tried with and without these lines enabled
     
-    cdc_acm_uart: cdc_acm_uart {
-        compatible = "zephyr,cdc-acm-uart";
-        label = "CDC_ACM_0";
-    };
+    // cdc_acm_uart: cdc_acm_uart {
+    //     compatible = "zephyr,cdc-acm-uart";
+    //     label = "CDC_ACM_0";
+    // };
     status = "okay";
 };
