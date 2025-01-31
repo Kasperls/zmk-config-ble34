@@ -35,7 +35,7 @@
             ;
     };
 
-    zephyr_udc0: &usbd {
+    zephyr_udc0: usbd {
         // I have tried with and without these lines enabled
         
         cdc_acm_uart: cdc_acm_uart {
