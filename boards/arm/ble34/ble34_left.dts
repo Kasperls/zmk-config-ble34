@@ -35,15 +35,15 @@
             ;
     };
 
-    zephyr_udc0: usbd {
-        // I have tried with and without these lines enabled
-        
-        cdc_acm_uart: cdc_acm_uart {
-            compatible = "zephyr,cdc-acm-uart";
-            label = "CDC_ACM_0";
-        };
-        status = "okay";
-    };
 
 };
 
+zephyr_udc0: &usbd {
+    // I have tried with and without these lines enabled
+    
+    cdc_acm_uart: cdc_acm_uart {
+        compatible = "zephyr,cdc-acm-uart";
+        label = "CDC_ACM_0";
+    };
+    status = "okay";
+};
