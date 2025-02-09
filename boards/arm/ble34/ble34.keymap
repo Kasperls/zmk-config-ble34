@@ -73,7 +73,7 @@
                 &kp Q            &kp W            &kp E            &kp R            &kp T                    &kp Y            &kp U            &kp I            &kp O            &kp P              
                 &lh_pht LSHIFT A &lh_pht LGUI S   &lh_pht LALT D   &lh_pht LCTRL F  &kp G                    &kp H            &rh_pht RCTRL J  &rh_pht RALT K   &rh_pht RGUI L   &rh_pht RSHIFT SEMI 
                 &kp Z            &kp S            &kp C            &kp V            &kp B                    &kp N            &kp M            &kp COMMA        &kp DOT          &kp FSLH
-                                                                   &kp SPACE        &mo CODE                 &mo CODE         &kp RETURN            
+                                                                   &kp SPACE        &mo MISC                 &mo CODE         &kp RETURN            
             >;
         };
 
@@ -88,8 +88,8 @@
 
         misc_layer {
             bindings = <
-                &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL       2 &bt BT_SEL 3   &bt BT_SEL 4             &none            &none            &none            &none            &none
-                &none            &kp F4           &kp F5           &kp F6           &none                    &none            &none            &none            &none            &none
+                &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4             &none            &none            &none            &none            &none
+                &bt BT_CLR       &kp F4           &kp F5           &kp F6           &none                    &none            &none            &none            &none            &none
                 &none            &kp F1           &kp F2           &kp F3           &none                    &none            &none            &none            &none            &none   
                                                                    &none            &none                    &none            &none
             >;
