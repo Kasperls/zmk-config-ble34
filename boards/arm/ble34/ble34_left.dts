@@ -8,12 +8,6 @@
 #include "ble34.dtsi"
 
 /{
-
-    // chosen {
-    //     zephyr,console = &cdc_acm_uart;
-    // };
-    
-
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
 
@@ -36,12 +30,3 @@
 
 
 };
-
-// zephyr_udc0: &usbd {
-    
-//     cdc_acm_uart: cdc_acm_uart {
-//         compatible = "zephyr,cdc-acm-uart";
-//         label = "CDC_ACM_0";
-//     };
-//     status = "okay";
-// };
