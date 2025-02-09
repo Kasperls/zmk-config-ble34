@@ -87,29 +87,59 @@ zephyr_udc0: &usbd {
 		#address-cells = <1>;
 		#size-cells = <1>;
 
-		code_partition: partition@27000 {
-			label = "code_partition";
-			reg = <0x00027000 0x000c5000>;
+        mbr_partition: partition@0 {
+			reg = <0x0 DT_SIZE_K(4)>;
 		};
 
-		/*
-		 * The flash starting at 0x000ec000 and ending at
-		 * 0x000f3fff is reserved for use by the application.
-		 */
 
-		/*
-		 * Storage partition will be used by FCB/LittleFS/NVS
-		 * if enabled.
-		 */
+        code_partition: partition@1000 {
+			label = "code_partition";
+			reg = <DT_SIZE_K(4) DT_SIZE_K(844)>;
+		};
 
-        storage_partition: partition@ec000 {
-            reg = <0x000ec000 0x00008000>;
+		// /*
+		//  * Storage partition will be used by FCB/LittleFS/NVS
+		//  * if enabled.
+		//  * See https://docs.nordicsemi.com/bundle/ncs-latest/page/zephyr/services/storage/nvs/nvs.html#flash_wear
+		//  */
+		storage_partition: partition@d4000 {
+			reg = <DT_SIZE_K(848) DT_SIZE_K(128)>;
+		};
+
+		// Address 0xf4000 is hardcoded at https://github.com/adafruit/Adafruit_nRF52_Bootloader/blob/master/linker/nrf52840.ld
+		// last build took 31612 bytes
+		// TODO: MCUBoot?
+		boot_partition: partition@f4000 {
+			// label = "adafruit_boot"; // 48kb
+			reg = <DT_SIZE_K(976) DT_SIZE_K(48)>;
         };
 
 
-		boot_partition: partition@f4000 {
-			label = "adafruit_boot";
-			reg = <0x000f4000 0x00008000>;
-		};
+		// code_partition: partition@27000 {
+		// 	label = "code_partition";
+		// 	reg = <0x00027000 0x000c5000>;
+		// };
+
+		// /*
+		//  * The flash starting at 0x000ec000 and ending at
+		//  * 0x000f3fff is reserved for use by the application.
+		//  */
+
+		// /*
+		//  * Storage partition will be used by FCB/LittleFS/NVS
+		//  * if enabled.
+		//  */
+
+        // storage_partition: partition@ec000 {
+        //     reg = <0x000ec000 0x00008000>;
+        // };
+
+        
+
+
+		// boot_partition: partition@f4000 {
+		// 	label = "adafruit_boot";
+		// 	reg = <0x000f4000 0x00008000>;
+		// };
 	};
 };
