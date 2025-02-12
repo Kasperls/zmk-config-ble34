@@ -83,10 +83,10 @@
 
         code_layer {
             bindings = <
-  &kp EQUAL  &kp N7            &kp N8            &kp N9        &kp MINUS       &kp SLASH  &kp NUBS    &kp LS(NUBS)    &kp LPAR        &kp RPAR
-  &kp MINUS  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(N6)    &kp PIPE        &none      &kp LS(N8)  &kp LC(LA(N7))  &kp LC(LA(N8))  &kp BSLH
-  &kp GRAVE  &kp N1            &kp NUMBER_1      &kp NUMBER_1  &kp NUMBER_1    &none      &kp LS(N9)  &kp LC(LA(N0))  &kp LC(LA(N9))  &none
-                                                 &to 0         &trans          &trans     &trans
+  &kp EQUAL      &kp LA(LC(NUMBER_2))  &kp LA(LC(NUMBER_4))  &kp LS(N5)  &kp MINUS       &kp SLASH  &kp NUBS    &kp LS(NUBS)    &kp LPAR        &kp TILDE
+  &kp LS(MINUS)  &kp LS(NUMBER_2)      &kp LS(NUMBER_3)      &kp LS(N6)  &kp PIPE        &none      &kp LS(N8)  &kp LC(LA(N7))  &kp LC(LA(N8))  &kp BSLH
+  &kp LS(N0)     &kp N1                &kp LS(NUHS)          &kp LS(N7)  &kp NUMBER_1    &none      &kp LS(N9)  &kp LC(LA(N0))  &kp LC(LA(N9))  &none
+                                                             &to 0       &trans          &trans     &trans
             >;
         };
 
