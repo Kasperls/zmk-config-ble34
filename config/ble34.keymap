@@ -33,11 +33,13 @@
         Combo_F12 {
             bindings = <&kp F12>;
             key-positions = <6 7>;
+            timeout-ms = <10>;
         };
 
         Combo_Alt_Left {
             bindings = <&kp LA(LEFT)>;
             key-positions = <7 8>;
+            timeout-ms = <10>;
         };
     };
 
