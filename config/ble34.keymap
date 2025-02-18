@@ -29,6 +29,16 @@
             bindings = <&soft_off>;
             key-positions = <9 19 29>;
         };
+
+        Combo_F12 {
+            bindings = <&kp F12>;
+            key-positions = <6 7>;
+        };
+
+        Combo_Alt_Left {
+            bindings = <&kp LA(LEFT)>;
+            key-positions = <7 8>;
+        };
     };
 
     behaviors {
@@ -97,9 +107,9 @@
 
         nav_num {
             bindings = <
-  &kp ESCAPE  &kp HOME            &kp UP     &kp END        &kp PG_UP        &trans     &kp N7                 &kp N8                 &kp N9               &trans
-  &kp TAB     &kp LEFT            &kp DOWN   &kp RIGHT      &kp PAGE_DOWN    &kp COMMA  &mt_HR RCTRL NUMBER_4  &mt_HR RIGHT_SHIFT N5  &mt_HR RIGHT_ALT N6  &trans
-  &kp DELETE  &kp LC(LEFT_ARROW)  &kp LC(C)  &kp LC(RIGHT)  &trans           &kp DOT    &kp NUMBER_1           &kp NUMBER_2           &kp NUMBER_3         &kp N0
+  &kp ESCAPE  &kp HOME            &kp UP     &kp END        &kp PG_UP        &none      &kp N7                 &kp N8                 &kp N9               &none
+  &kp TAB     &kp LEFT            &kp DOWN   &kp RIGHT      &kp PAGE_DOWN    &kp COMMA  &mt_HR RCTRL NUMBER_4  &mt_HR RIGHT_SHIFT N5  &mt_HR RIGHT_ALT N6  &none
+  &kp DELETE  &kp LC(LEFT_ARROW)  &kp LC(C)  &kp LC(RIGHT)  &none            &kp DOT    &kp NUMBER_1           &kp NUMBER_2           &kp NUMBER_3         &kp N0
                                              &trans         &trans           &trans     &trans
             >;
         };
