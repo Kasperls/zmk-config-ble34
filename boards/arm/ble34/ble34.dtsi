@@ -61,7 +61,7 @@
 
     vbatt: vbatt {
         compatible = "zmk,battery-nrf-vddh";
-        output-ohms = <2000000>;
+        output-ohms = <2200000>;
         // full-ohms = <(806000 + 2000000)>;
     };
 
