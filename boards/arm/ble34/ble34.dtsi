@@ -65,6 +65,11 @@
         output-ohms = <2200000>;
         // full-ohms = <(806000 + 2000000)>;
     };
+
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+    };
 };
 
 &physical_layout0 {
