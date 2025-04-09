@@ -9,7 +9,7 @@
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 // #include <physical_layouts.dtsi>
-// #include "ble34_layout.dtsi"
+#include "ble34-layouts.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 &pinctrl {
@@ -29,6 +29,7 @@
 
         zmk,kscan = &kscan0;
         zmk,battery = &vbatt;
+        zmk,physical-layout = &physical_layout0;
         // zmk,matrix-transform = &default_transform;
     };
 
