@@ -8,7 +8,7 @@
 
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
-
+// #include <physical_layouts.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 
 &pinctrl {
@@ -28,7 +28,7 @@
 
         zmk,kscan = &kscan0;
         zmk,battery = &vbatt;
-        zmk,matrix-transform = &default_transform;
+        // zmk,matrix-transform = &default_transform;
     };
 
     leds {
@@ -64,7 +64,11 @@
         output-ohms = <2200000>;
         // full-ohms = <(806000 + 2000000)>;
     };
+};
 
+&physical_layout0 {
+    // kscan = <&kscan0>; // Label of the kscan node this layout uses
+    transform = <&default_transform>; // Label of the matrix transform this layout uses
 };
 
 zephyr_udc0: &usbd {
