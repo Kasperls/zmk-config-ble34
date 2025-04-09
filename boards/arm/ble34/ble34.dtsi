@@ -9,7 +9,7 @@
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 // #include <physical_layouts.dtsi>
-#include "ble34_layout.dtsi"
+// #include "ble34_layout.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 &pinctrl {
