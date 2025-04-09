@@ -6,6 +6,7 @@
 */
 
 #include "ble34.dtsi"
+#include "ble34-layout.dtsi"
 
 /{
     kscan0: kscan {
